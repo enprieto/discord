@@ -16,8 +16,6 @@ async def play_movie():
         channel = discord_client.get_channel(channel_id)
         for i in range(0, 300):
             await channel.send(screenshots[i].link)
-            if i == 300:
-                i = 0
             await asyncio.sleep(20)
 
 discord_client.loop.create_task(play_movie())
